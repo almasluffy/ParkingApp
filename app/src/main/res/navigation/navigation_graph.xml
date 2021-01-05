@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/parkingPlaceFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.almatyparking.presentation.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentPay"
+        android:name="com.example.almatyparking.presentation.payment.listToPay.PaymentPay"
+        android:label="Payment"
+        tools:layout="@layout/fragment_payment_pay">
+
+        <action
+            android:id="@+id/action_PaymentPay_to_PaymentDetailFragment"
+            app:destination="@+id/paymentDetail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/parkingPlaceFragment"
+        android:name="com.example.almatyparking.presentation.parking_place.ParkingPlaceFragment"
+        android:label="ParkingPlaces"
+        tools:layout="@layout/fragment_parking_place">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentDetail"
+        android:name="com.example.almatyparking.presentation.payment.detail.PaymentDetailFragment"
+        android:label="PaymentPay"
+        tools:layout="@layout/fragment_payment_detail">
+
+        <action
+            android:id="@+id/action_PaymentDetailFragment_to_PaymentPay"
+            app:destination="@+id/paymentPay" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.example.almatyparking.presentation.car.CarListFragment"
+        android:label="Car"
+        tools:layout="@layout/fragment_car_list">
+
+        <action
+            android:id="@+id/action_CarList_to_CarCreate"
+            app:destination="@+id/carCreateFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/carCreateFragment"
+        android:name="com.example.almatyparking.presentation.car.car_create.CarCreateFragment"
+        android:label="CarCreation"
+        tools:layout="@layout/fragment_car_create">
+        <action
+            android:id="@+id/action_CarCreate_to_CarList"
+            app:destination="@+id/carFragment" />
+
+    </fragment>
+
+
+
+</navigation>

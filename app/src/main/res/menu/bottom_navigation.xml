@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/parkingPlaceFragment"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Парковки" />
+
+    <item
+        android:id="@+id/paymentPay"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:title="Оплата" />
+
+    <item
+        android:id="@+id/carFragment"
+        android:icon="@drawable/ic_baseline_directions_car_24"
+        android:title="Мои Машины" />
+
+    <item
+        android:id="@+id/historyFragment"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        android:title="Иcтория" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="Профиль" />
+
+</menu>
